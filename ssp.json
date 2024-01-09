@@ -231,16 +231,54 @@
       "description": "This is the control implementation for the system.",
       "implemented-requirements": [
         {
+          "uuid": "03389932-b854-4143-9f3b-34a6f432b6cc",
+          "control-id": "ac-7",
+          "statements": [
+            {
+              "statement-id": "ac-7_smt",
+              "uuid": "774773ec-31e1-43c4-a8e2-19b2df0bcca3",
+              "by-components": [
+                {
+                  "component-uuid": "ab5e6bb1-d485-4ebc-b1be-fae6e4ea7e98",
+                  "uuid": "d896e313-ddae-453b-93d4-a5face770e29",
+                  "description": "Unsuccessful Logon Attempts",
+                  "set-parameters": [
+                    {
+                      "param-id": "ac-7_odp.01",
+                      "values": [
+                        "confidentiality"
+                      ]
+                    },
+                    {
+                      "param-id": "vpc_id",
+                      "values": [
+                        "CHANGEME"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "statement-id": "ac-7_smt.a",
+              "uuid": "35428873-d18b-4fb4-98e9-64b02a7f6288",
+              "by-components": [
+                {
+                  "component-uuid": "ab5e6bb1-d485-4ebc-b1be-fae6e4ea7e98",
+                  "uuid": "f125718b-ebf7-4cad-b7b2-dde51464b939",
+                  "description": "All data stored at rest must be encrypted."
+                }
+              ]
+            }
+          ]
+        },
+        {
           "uuid": "aaadb3ff-6ae8-4332-92db-211468c52af2",
           "control-id": "sc-28",
           "statements": [
             {
               "statement-id": "sc-28_smt",
-              "uuid": "7aa47329-dc55-4126-a19d-172a8fe7438d"
-            },
-            {
-              "statement-id": "sc-28_smt.a",
-              "uuid": "f3a87a91-9ed3-425c-b305-21e4534a1c34",
+              "uuid": "7aa47329-dc55-4126-a19d-172a8fe7438d",
               "by-components": [
                 {
                   "component-uuid": "ab5e6bb1-d485-4ebc-b1be-fae6e4ea7e98",
@@ -248,9 +286,9 @@
                   "description": "All data stored at rest must be encrypted.",
                   "set-parameters": [
                     {
-                      "param-id": "sc-28_prm_1",
+                      "param-id": "sc-28_odp.01",
                       "values": [
-                        "all staff and contractors within the organization"
+                        "confidentiality"
                       ]
                     },
                     {
