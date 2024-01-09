@@ -36,7 +36,7 @@
       ]
     },
     "import-profile": {
-      "href": "../profile/NIST_SP-800-53_rev5_LOW-baseline_profile.json"
+      "href": "https://raw.githubusercontent.com/eghotp/oscal/main/profile/NIST_SP-800-53_rev5_LOW-baseline_profile.json"
     },
     "system-characteristics": {
       "system-name": "Pa Tent Tracking System",
@@ -80,7 +80,7 @@
         "security-objective-availability": "fips-199-low"
       },
       "status": {
-        "state": "active",
+        "state": "other",
         "remarks": "System is active in production"
       },
       "props": [
