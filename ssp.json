@@ -79,6 +79,10 @@
         "security-objective-integrity": "fips-199-moderate",
         "security-objective-availability": "fips-199-low"
       },
+      "status": {
+        "state": "active",
+        "remarks": "System is active in production"
+      },
       "props": [
         {
           "name": "deployment-model",
