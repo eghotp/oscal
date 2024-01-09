@@ -1,0 +1,267 @@
+{
+  "system-security-plan": {
+    "uuid": "eabbdeda-1878-4461-bd07-43c2e17f0db3",
+    "metadata": {
+      "title": "USPTO Pa Tent System Security Plan",
+      "last-modified": "2024-01-07T13:57:28.355446-04:00",
+      "version": "1.0",
+      "oscal-version": "1.0.0",
+      "roles": [
+        {
+          "id": "legal-officer",
+          "title": "Legal Officer"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "0629d208-fbcf-4393-a1a7-06a513bf348c",
+          "type": "organization",
+          "name": "Enterprise Asset Owners"
+        },
+        {
+          "uuid": "3bffa3b1-9497-4201-9c02-96dd307495a3",
+          "type": "organization",
+          "name": "Enterprise Asset Administrators"
+        },
+        {
+          "uuid": "f4cdb077-f4c0-4fc6-ae00-6cfd9c6632d3",
+          "type": "organization",
+          "name": "Legal Department"
+        },
+        {
+          "uuid": "32769ad0-6d61-4014-8618-c7c7b514c57b",
+          "type": "organization",
+          "name": "IT Department"
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "../profile/NIST_SP-800-53_rev5_LOW-baseline_profile.json"
+    },
+    "system-characteristics": {
+      "system-name": "Pa Tent Tracking System",
+      "description": "This is an example of a system that manages patent information.",
+      "system-ids": [
+        {
+          "id": "590f9bdc-0efe-4a90-a463-98065edc077a",
+          "identifier-type": "https://ietf.org/rfc/rfc4122"
+        }
+      ],
+      "security-sensitivity-level": "moderate",
+      "system-information": {
+        "information-types": [
+          {
+            "uuid": "f1e9c108-7fa2-4dc1-ad1c-11d612369b6b",
+            "title": "Information Management",
+            "categorizations": [
+              {
+                "system": "https://doi.org/10.6028/NIST.SP.800-60v2r1",
+                "information-type-ids": [
+                  "C.3.5.7"
+                ]
+              }
+            ],
+            "description": "This system maintains current and historical Pa Tent data.",
+            "confidentiality-impact": {
+              "base": "fips-199-low"
+            },
+            "integrity-impact": {
+              "base": "fips-199-moderate"
+            },
+            "availability-impact": {
+              "base": "fips-199-low"
+            }
+          }
+        ]
+      },
+      "security-impact-level": {
+        "security-objective-confidentiality": "fips-199-low",
+        "security-objective-integrity": "fips-199-moderate",
+        "security-objective-availability": "fips-199-low"
+      },
+      "props": [
+        {
+          "name": "deployment-model",
+          "value": "public"
+        },
+        {
+          "name": "service-models",
+          "value": "iaas"
+        }
+      ],
+      "authorization-boundary": {
+        "description": "The authorization boundary stops once network traffic exits the Pa Tent VPC."
+      }
+    },
+    "system-implementation": {
+      "remarks": "This is a partial implementation that addresses the logging server portion of the Pa Tent system.",
+      "users": [
+        {
+          "uuid": "9824089b-322c-456f-86c4-4111c1100f69",
+          "title": "System Administrator",
+          "role-ids": [
+            "asset-administrator"
+          ],
+          "props": [
+            {
+              "name": "type",
+              "value": "internal"
+            }
+          ]
+        },
+        {
+          "uuid": "ae8de94c-135d-5303-83b1-114b6a117a07",
+          "title": "Audit Team",
+          "role-ids": [
+            "asset-owner"
+          ],
+          "props": [
+            {
+              "name": "type",
+              "value": "internal"
+            }
+          ]
+        },
+        {
+          "uuid": "372ce3a3-92b0-437e-a98c-24c29f9bfab8",
+          "title": "Legal Department",
+          "role-ids": [
+            "legal-officer"
+          ],
+          "props": [
+            {
+              "name": "type",
+              "value": "internal"
+            }
+          ]
+        }
+      ],
+      "components": [
+        {
+          "uuid": "ab5e6bb1-d485-4ebc-b1be-fae6e4ea7e98",
+          "title": "Logging Server",
+          "description": "A centralized logging server for the entire Pa Tent System.",
+          "status": {
+            "state": "operational"
+          },
+          "type": "software",
+          "responsible-roles": [
+            {
+              "role-id": "asset-owner",
+              "party-uuids": [
+                "0629d208-fbcf-4393-a1a7-06a513bf348c"
+              ]
+            },
+            {
+              "role-id": "asset-administrator",
+              "party-uuids": [
+                "3bffa3b1-9497-4201-9c02-96dd307495a3"
+              ]
+            }
+          ]
+        },
+        {
+          "uuid": "795533ab-9427-4abe-820f-0b571bacfe6d",
+          "title": "Enterprise Logging, Monitoring, and Alerting Policy",
+          "type": "policy",
+          "description": "Requires all components to send logs to the enterprise logging solution\n\n- Requires all components synchronize their time with the appropriate enterprise time service, and at what frequency.\n\n- Identifies the events that must be captured\n\n- Identifies who is responsible/accountable for performing these functions",
+          "status": {
+            "state": "operational"
+          },
+          "props": [
+            {
+              "name": "version",
+              "value": "2.1"
+            },
+            {
+              "name": "last-modified-date",
+              "value": "20240108"
+            }
+          ],
+          "responsible-roles": [
+            {
+              "role-id": "maintainer",
+              "party-uuids": [
+                "f4cdb077-f4c0-4fc6-ae00-6cfd9c6632d3"
+              ]
+            }
+          ]
+        }
+      ],
+      "inventory-items": [
+        {
+          "uuid": "c9d32654-a0eb-4cf2-b5c1-20928983063c",
+          "description": "The logging server.",
+          "props": [
+            {
+              "name": "asset-id",
+              "value": "asset-id-logging-server"
+            }
+          ],
+          "responsible-parties": [
+            {
+              "role-id": "asset-administrator",
+              "party-uuids": [
+                "3bffa3b1-9497-4201-9c02-96dd307495a3"
+              ]
+            },
+            {
+              "role-id": "asset-owner",
+              "party-uuids": [
+                "0629d208-fbcf-4393-a1a7-06a513bf348c"
+              ]
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "ab5e6bb1-d485-4ebc-b1be-fae6e4ea7e98"
+            },
+            {
+              "component-uuid": "795533ab-9427-4abe-820f-0b571bacfe6d"
+            }
+          ]
+        }
+      ]
+    },
+    "control-implementation": {
+      "description": "This is the control implementation for the system.",
+      "implemented-requirements": [
+        {
+          "uuid": "aaadb3ff-6ae8-4332-92db-211468c52af2",
+          "control-id": "sc-28",
+          "statements": [
+            {
+              "statement-id": "sc-28_smt",
+              "uuid": "7aa47329-dc55-4126-a19d-172a8fe7438d"
+            },
+            {
+              "statement-id": "sc-28_smt.a",
+              "uuid": "f3a87a91-9ed3-425c-b305-21e4534a1c34",
+              "by-components": [
+                {
+                  "component-uuid": "ab5e6bb1-d485-4ebc-b1be-fae6e4ea7e98",
+                  "uuid": "a74681b2-facb-46eb-90fd-0d55aa71ab7b",
+                  "description": "All data stored at rest must be encrypted.",
+                  "set-parameters": [
+                    {
+                      "param-id": "sc-28_prm_1",
+                      "values": [
+                        "all staff and contractors within the organization"
+                      ]
+                    },
+                    {
+                      "param-id": "vpc_id",
+                      "values": [
+                        "CHANGEME"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
