@@ -1,0 +1,447 @@
+{
+    "assessment-results": {
+        "uuid": "7ec5c269-ee26-48c8-b32c-91ab26139023",
+        "metadata": {
+            "title": "USPTO Pa Tent System Security Assessment Report (SAR)",
+            "published": "2024-08-22T02:22:00.000-04:00",
+            "last-modified": "2024-08-22T02:22:00.000-04:00",
+            "version": "fedramp1.2.1-oscal1.0.0",
+            "oscal-version": "1.0.0",
+            "props": [
+                {
+                    "name": "marking",
+                    "value": "Controlled Unclassified Information"
+                }
+            ],
+            "roles": [
+                {
+                    "id": "fedramp-pmo",
+                    "title": "FedRAMP Program Management Office",
+                    "description": "The organization that prepared this SSP. If developed in-house, this is the CSP itself."
+                },
+                {
+                    "id": "prepared-by",
+                    "title": "Prepared By",
+                    "description": "The organization that prepared this SAR."
+                },
+                {
+                    "id": "prepared-for",
+                    "title": "Prepared For",
+                    "description": "The organization for which this SAR was prepared. Typically the CSP."
+                },
+                {
+                    "id": "content-approver",
+                    "title": "Security Assessment Plan Approval",
+                    "description": "The individual or individuals accountable for the accuracy of this SAR."
+                },
+                {
+                    "id": "assessor",
+                    "title": "Assessment Organization",
+                    "description": "The organization performing the assessment."
+                },
+                {
+                    "id": "assessment-team",
+                    "title": "Assessment Team",
+                    "description": "The individual or individuals performing the assessment."
+                },
+                {
+                    "id": "assessment-lead",
+                    "title": "Assessment Lead",
+                    "description": "The individual leading the assessment activities."
+                },
+                {
+                    "id": "penetration-test-team",
+                    "title": "Penetration Test Team",
+                    "description": "The individual or individuals performing the penetration test."
+                },
+                {
+                    "id": "penetration-test-lead",
+                    "title": "Penetration Test Lead",
+                    "description": "The individual leading the penetration test activities."
+                },
+                {
+                    "id": "assessment-executive",
+                    "title": "Assessment Organization's Managerial POC",
+                    "description": "The management-level POC within the assessor's organization accountable for the organization's assessment performance."
+                },
+                {
+                    "id": "csp-assessment-poc",
+                    "title": "CSP POCs During Testing",
+                    "description": "At least three CSP testing points of contact must be identified in a FedRAMP SAP."
+                },
+                {
+                    "id": "csp-operations-center",
+                    "title": "CSP Operations POC",
+                    "description": "An operations center role, such as a SOC or NOC."
+                },
+                {
+                    "id": "csp-end-of-testing-poc",
+                    "title": "CSP's End of Testing Notification POC",
+                    "description": "A role for an individual within the CSP to be notified by the assessor when testing is complete."
+                },
+                {
+                    "id": "csp-results-poc",
+                    "title": "CSP Results POCs ",
+                    "description": "A role for the individuals within the CSP who are to receive the assessment results."
+                }
+            ],
+            "locations": [
+                {
+                    "uuid": "21a201ac-8ee9-4a2d-812a-a752591a3963",
+                    "title": "Assessor's HQ",
+                    "address": {
+                        "type": "work",
+                        "addr-lines": [
+                            "600 Dulany St"
+                        ],
+                        "city": "Alexandria",
+                        "state": "VA",
+                        "postal-code": "22314",
+                        "country": "US"
+                    },
+                    "remarks": "The assessor's HQ, or the address of the assessment team's primary business location."
+                }
+            ],
+            "parties": [
+                {
+                    "uuid": "49f73135-efcc-4275-9a79-003656ad820a",
+                    "type": "organization",
+                    "name": "USPTO Office of the Chief Information Security Officer",
+                    "short-name": "OCISO",
+                    "props": [
+                        {
+                            "name": "iso-iec-17020-identifier",
+                            "ns": "https:\\/\\/fedramp.gov\\/ns\\/oscal",
+                            "value": "0000.00"
+                        }
+                    ],
+                    "links": [
+                        {
+                            "href": "https:\\/\\/www.uspto.gov",
+                            "rel": "home-page"
+                        }
+                    ],
+                    "location-uuids": [
+                        "49f73135-efcc-4275-9a79-003656ad820a"
+                    ],
+                    "remarks": "Replace sample 3PAO information.\n\nIf the assessor is A2LA Certified, include the ISO\\/IEC-17020 "
+                },
+                {
+                    "uuid": "77e0e2c8-2560-4fe9-ac78-c3ff4ffc9f6d",
+                    "type": "organization",
+                    "name": "Federal Risk and Authorization Management Program: Program Management Office",
+                    "short-name": "FedRAMP PMO",
+                    "links": [
+                        {
+                            "href": "https:\\/\\/fedramp.gov",
+                            "rel": "homepage"
+                        },
+                        {
+                            "href": "#a2381e87-3d04-4108-a30b-b4d2f36d001f",
+                            "rel": "logo"
+                        },
+                        {
+                            "href": "#985475ee-d4d6-4581-8fdf-d84d3d8caa48",
+                            "rel": "reference"
+                        },
+                        {
+                            "href": "#1a23a771-d481-4594-9a1a-71d584fa4123",
+                            "rel": "reference"
+                        }
+                    ],
+                    "email-addresses": [
+                        "info@fedramp.gov"
+                    ],
+                    "addresses": [
+                        {
+                            "type": "work",
+                            "addr-lines": [
+                                "1800 F St. NW"
+                            ],
+                            "city": "Washington",
+                            "state": "DC",
+                            "postal-code": "20006",
+                            "country": "US"
+                        }
+                    ],
+                    "remarks": "This party entry must be present in a FedRAMP SAR.\n\nThe uuid may be different; however, the uuid must be associated with the \\\"fedramp-pmo\\\" role in the responsible-party assemblies."
+                },
+                {
+                    "uuid": "f4568fda-c6d2-4640-adec-0012015af7d0",
+                    "type": "person",
+                    "name": "Eric D",
+                    "props": [
+                        {
+                            "name": "job-title",
+                            "value": "Automatoin Expert"
+                        },
+                        {
+                            "name": "mail-stop",
+                            "value": "Office 1-A"
+                        }
+                    ],
+                    "email-addresses": [
+                        "eric@uspto.gov"
+                    ],
+                    "telephone-numbers": [
+                        {
+                            "number": "202-000-0001"
+                        }
+                    ],
+                    "location-uuids": [
+                        "49f73135-efcc-4275-9a79-003656ad820a"
+                    ],
+                    "member-of-organizations": [
+                        "49f73135-efcc-4275-9a79-003656ad820a"
+                    ]
+                }
+            ],
+            "responsible-parties": [
+                {
+                    "role-id": "fedramp-pmo",
+                    "party-uuids": [
+                        "77e0e2c8-2560-4fe9-ac78-c3ff4ffc9f6d"
+                    ]
+                },
+                {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                        "49f73135-efcc-4275-9a79-003656ad820a"
+                    ],
+                    "remarks": "Exactly one party\n\nThis is the assessor."
+                },
+                {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                        "295f4810-9add-4d64-b28e-06eccd0b6a33"
+                    ],
+                    "remarks": "Exactly one party.\n\nThis is the UUID for the CSP in the SSP.\n\nIf no OSCAL-based SSP exists, create a CSP party in the SAP, and provide that UUID here."
+                },
+                {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                        "f4568fda-c6d2-4640-adec-0012015af7d0"
+                    ],
+                    "remarks": "One ore more parties"
+                },
+                {
+                    "role-id": "assessor",
+                    "party-uuids": [
+                        "49f73135-efcc-4275-9a79-003656ad820a"
+                    ],
+                    "remarks": "Exactly one party\n\nAssessment Organization (3PAO)"
+                },
+                {
+                    "role-id": "assessment-team",
+                    "party-uuids": [
+                        "f4568fda-c6d2-4640-adec-0012015af7d0"
+                    ],
+                    "remarks": "One or more parties"
+                },
+                {
+                    "role-id": "assessment-lead",
+                    "party-uuids": [
+                        "f4568fda-c6d2-4640-adec-0012015af7d0"
+                    ],
+                    "remarks": "Exactly one party"
+                },
+                {
+                    "role-id": "penetration-test-team",
+                    "party-uuids": [
+                        "f4568fda-c6d2-4640-adec-0012015af7d0"
+                    ],
+                    "remarks": "One or more partys"
+                },
+                {
+                    "role-id": "penetration-test-lead",
+                    "party-uuids": [
+                        "f4568fda-c6d2-4640-adec-0012015af7d0"
+                    ],
+                    "remarks": "Exactly one party"
+                },
+                {
+                    "role-id": "assessment-executive",
+                    "party-uuids": [
+                        "f4568fda-c6d2-4640-adec-0012015af7d0"
+                    ],
+                    "remarks": "Exactly one party"
+                },
+                {
+                    "role-id": "csp-operations-center",
+                    "party-uuids": [
+                        "4c9df173-6e48-4c4b-ad6a-957f54a2823e"
+                    ],
+                    "remarks": "Exactly one party\n\nThe party-uuid should reference a party in the SSP.\n\nIf an appropriate party does not exist in the SSP, the SAP tool should add a party to the SAP, or have the CSP add the party to the SSP..\n\nThe SAP tool should not modify the SSP."
+                },
+                {
+                    "role-id": "csp-assessment-poc",
+                    "party-uuids": [
+                        "4c9df173-6e48-4c4b-ad6a-957f54a2823e"
+                    ],
+                    "remarks": "There should be at least three CSP Assessment POCs.\n\nAt least one should be available 24x7 during assessment activities.\n\nAt least one should be an operations center, such a SOC or NOC.\n\nThe party-uuid should reference a party in the SSP or SAP.\n\nIf an appropriate party does not exist in the SSP or SAP, the SAR tool should add a party to the SAR.\n\nThe SAP tool should not modify the SSP."
+                },
+                {
+                    "role-id": "csp-end-of-testing-poc",
+                    "party-uuids": [
+                        "f4568fda-c6d2-4640-adec-0012015af7d0"
+                    ],
+                    "remarks": "One or more parties"
+                },
+                {
+                    "role-id": "csp-results-poc",
+                    "party-uuids": [
+                        "f4568fda-c6d2-4640-adec-0012015af7d0"
+                    ],
+                    "remarks": "One or more parties"
+                }
+            ],
+            "remarks": "This OSCAL-based FedRAMP SAR Template can be used for the FedRAMP initial or annual assessment reporting."
+        },
+        "import-ap": {
+            "href": "..\\/sap\\/FedRAMP-SAP-OSCAL-Template.xml",
+            "remarks": "FedRAMP prefers the path for the SAP be relative to the location of this SAR file. Absolute links will not work when FedRAMP tools import the content.\n\nThis may point to a back-matter resource using a URI fragment."
+        },
+        "local-definitions": {
+            "objectives-and-methods": [
+                {
+                    "control-id": "ac-2",
+                    "parts": [
+                        {
+                            "id": "sap-obj-1",
+                            "name": "objective",
+                            "title": "SAP Inserted Objective",
+                            "props": [
+                                {
+                                    "name": "lable",
+                                    "value": "AC-2 SAP-1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "activities": [
+                {
+                    "uuid": "1BC8F0BB-E601-4946-A0E6-FCB934EBAA06",
+                    "title": "Locally Defined Activity",
+                    "description": "This describes an activity that was not defined in the SAP, but was performed during the assessment.",
+                    "props": [
+                        {
+                            "name": "type",
+                            "value": "manual"
+                        }
+                    ],
+                    "steps": [
+                        {
+                            "uuid": "FB039FD7-5A2B-4C0F-867C-88CCE9C3778C",
+                            "description": "Describe test step #1",
+                            "props": [
+                                {
+                                    "name": "sort-id",
+                                    "value": "001"
+                                }
+                            ]
+                        },
+                        {
+                            "uuid": "FB039FD7-5A2B-4C0F-867C-88CCE9C3778C",
+                            "description": "Describe test step #2",
+                            "props": [
+                                {
+                                    "name": "sort-id",
+                                    "value": "002"
+                                }
+                            ]
+                        },
+                        {
+                            "uuid": "FB039FD7-5A2B-4C0F-867C-88CCE9C3778C",
+                            "description": "Describe test step #3",
+                            "props": [
+                                {
+                                    "name": "sort-id",
+                                    "value": "003"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "results": [
+            {
+                "uuid": "af0c8632-c994-48b7-944e-2314b6abace7",
+                "title": "2024 Annual Assessment",
+                "description": "2024 Annual Assessment for the USPTO Pa Tent System.",
+                "start": "2024-01-08T00:00:00Z",
+                "end": "2024-01-09T00:00:00Z",
+                "reviewed-controls": {
+                    "control-selections": [
+                        {
+                            "include-controls": [
+                                {
+                                    "control-id": "ac-7"
+                                },
+                                {
+                                    "control-id": "sc-28"
+                                }
+                            ],
+                            "remarks": "Other controls omitted from example."
+                        }
+                    ]
+                },
+                "observations": [
+                ],
+                "findings": [
+                    {
+                        "uuid": "d1316907-a5e5-4ad5-871d-c2c21938360e",
+                        "title": "ac-7",
+                        "description": "The results of ac-7.1: Lock accounts after 3 failed attempts.",
+                        "origins": [
+                            {
+                                "actors": [
+                                    {
+                                        "type": "party",
+                                        "actor-uuid": "f4568fda-c6d2-4640-adec-0012015af7d0"
+                                    }
+                                ]
+                            }
+                        ],
+                        "target": {
+                            "type": "statement-id",
+                            "target-id": "ac-7.1_obj",
+                            "status": {
+                                "state": "not-satisfied"
+                            }
+                        },
+                        "remarks": "remarks go here"
+                    },
+                    {
+                        "uuid": "bbff6f4c-4ce3-4b8c-936f-bb3ec51f193a",
+                        "title": "sc-28",
+                        "description": "The results of sc-28.1: All data stored at rest must be encrypted.",
+                        "origins": [
+                            {
+                                "actors": [
+                                    {
+                                        "type": "party",
+                                        "actor-uuid": "f4568fda-c6d2-4640-adec-0012015af7d0"
+                                    }
+                                ]
+                            }
+                        ],
+                        "target": {
+                            "type": "statement-id",
+                            "target-id": "ac-28.1_obj-1",
+                            "status": {
+                                "state": "not-satisfied"
+                            }
+                        },
+                        "remarks": "remarks go here"
+                    }
+                ]
+            }
+        ],
+        "back-matter": {
+            "resources": []
+        }
+    }
+}

@@ -163,33 +163,6 @@
               ]
             }
           ]
-        },
-        {
-          "uuid": "795533ab-9427-4abe-820f-0b571bacfe6d",
-          "title": "Enterprise Logging, Monitoring, and Alerting Policy",
-          "type": "policy",
-          "description": "Requires all components to send logs to the enterprise logging solution\n\n- Requires all components synchronize their time with the appropriate enterprise time service, and at what frequency.\n\n- Identifies the events that must be captured\n\n- Identifies who is responsible/accountable for performing these functions",
-          "status": {
-            "state": "operational"
-          },
-          "props": [
-            {
-              "name": "version",
-              "value": "2.1"
-            },
-            {
-              "name": "last-modified-date",
-              "value": "20240108"
-            }
-          ],
-          "responsible-roles": [
-            {
-              "role-id": "maintainer",
-              "party-uuids": [
-                "f4cdb077-f4c0-4fc6-ae00-6cfd9c6632d3"
-              ]
-            }
-          ]
         }
       ],
       "inventory-items": [
@@ -244,15 +217,11 @@
                   "description": "Unsuccessful Logon Attempts",
                   "set-parameters": [
                     {
-                      "param-id": "ac-7_odp.01",
+                      "param-id": "login_info",
                       "values": [
-                        "confidentiality"
-                      ]
-                    },
-                    {
-                      "param-id": "vpc_id",
-                      "values": [
-                        "CHANGEME"
+                        "https://dry-dust-4025.tines.com/webhook/909a66a2b71433d9e4e204f647978876/a7ebc1722f427fc28887a5af17ee9a83",
+                        "testuser",
+                        "password"
                       ]
                     }
                   ]
@@ -266,7 +235,21 @@
                 {
                   "component-uuid": "ab5e6bb1-d485-4ebc-b1be-fae6e4ea7e98",
                   "uuid": "f125718b-ebf7-4cad-b7b2-dde51464b939",
-                  "description": "All data stored at rest must be encrypted."
+                  "description": "Lock accounts after 3 failed attempts.",
+                  "set-parameters": [
+                    {
+                      "param-id": "ac-07_odp.01",
+                      "values": [
+                        "3"
+                      ]
+                    },
+                    {
+                      "param-id": "ac-07_odp.02",
+                      "values": [
+                        "5 minute time period"
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -294,7 +277,7 @@
                     {
                       "param-id": "vpc_id",
                       "values": [
-                        "CHANGEME"
+                        "vpc-0b7a955643b32e2a7"
                       ]
                     }
                   ]
